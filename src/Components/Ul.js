@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom"
 
 const Ul = (props) =>{
+  const {link,lignes} = props
     return( <ul>
-        {props.lignes.map(ligne=>{
-          return  <li key={ligne.Slug}><Link to={`/${ligne.Slug}`}>{ligne.Name}</Link></li>
+        {lignes.map(ligne=>{
+          return  <li key={ligne.Name}>{link? <Link to={`/${ligne.Slug}`}>{ligne.Name}</Link> : <>{ligne.Name}</>}</li>
         })}
     </ul> )
 }

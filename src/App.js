@@ -16,7 +16,7 @@ function App() {
           <Route path='/' element={<Home/>}/>
           <Route path='/:slug' element={<Categorie/>}/>
           <Route path='/NewCategorie' element={<NewCategorie/>}/>
-          <Route path='/NewArticle' element={<NewArticle/>}/>
+          <Route path='/NewArticle/:slug' element={<NewArticle/>}/>
           <Route path='*' element={<NotFound/>}/>
       </Routes>
     </BrowserRouter>
