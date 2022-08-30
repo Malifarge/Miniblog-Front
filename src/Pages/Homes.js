@@ -2,28 +2,27 @@ import H1 from "../Components/H1";
 import { useEffect,useState } from "react";
 import Ul from "../Components/Ul";
 import Card from "../Components/Card";
+import { fetchCategories } from "../API/Catégorie";
+import { fetchArticles } from "../API/Articles";
 
 const Home = () =>{
 
     const [categories,setCategories]= useState([])
     const [articles,setArticles]= useState([])
 
-
-    const fetchCategories = async () =>{
-        const response = await fetch('http://localhost:5000/categories')
-        const Data = await response.json()
+    const fetchDataCategories = async () =>{
+        const Data = await fetchCategories()
         setCategories(Data);
     }
 
-    const fetchArticles = async () =>{
-        const response = await fetch('http://localhost:5000/articles')
-        const Data = await response.json() 
+    const fetchDataArticles = async () =>{
+        const Data = await fetchArticles("")
         setArticles(Data);
     }
 
     useEffect(()=>{
-        fetchCategories()
-        fetchArticles()
+        fetchDataCategories()
+        fetchDataArticles()
     },[])
 
     return (
