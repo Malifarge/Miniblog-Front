@@ -8,11 +8,13 @@ import Button from "../Components/Button";
 import Card from "../Components/Card";
 
 import { fetchArticles } from "../API/Articles";
+import { fetchCategories } from "../API/Catégorie";
 
 
 const Categorie = () =>{
 
     const [articles,setArticles] = useState([])
+    const [categorie,setCategorie] = useState({})
     const {slug} = useParams()
     const navigate = useNavigate() 
 
@@ -21,27 +23,36 @@ const Categorie = () =>{
         setArticles(Data)
     }
 
+    const fetchDataCategorie = async () =>{
+        const Data = await fetchCategories()
+        const filterData = Data.find(d=>d.Slug===slug)
+        setCategorie(filterData)
+    }
+
     const handleNewClick = () =>{
         navigate(`/NewArticle/${slug}`)
     }
 
     useEffect(()=>{
         fetchDataArticles()
+        fetchDataCategorie()
     },[])
-
 
     return (
         <>
         <section>
-            <H1>{slug}</H1>
-            <Button
-            text={"New Article"}
-            handleClick={handleNewClick}
-            />
+            <article className="flex jcsb aic">
+                <H1>{categorie.Name}</H1>
+                <Button
+                text={"New Article"}
+                handleClick={handleNewClick}
+                />
+            </article>
+            <small className="tierce">{categorie.Description}</small>
         </section>
-        <section>
+        <section className="flex wrap g-30">
             {articles.map(article=>{
-                return <article key={article.Slug}>
+                return <article key={article.Slug} className="b p-10 w-280">
                     <Card article={article}/>
                 </article>
             })}
