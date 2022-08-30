@@ -31,11 +31,13 @@ const Home = () =>{
     return (
         <>
         <H1>Home</H1>
-        <section>
+        <section className="flex">
             <Ul lignes={categories} link={true}/>
-            <article>
+            <article className="flex clmn aic w100-100 g-30">
                 {articles.map(article=>{
-                    return <Card key={article.Slug} article={article}/>
+                    return <div className="w100-50 flex clmn b p-10">
+                    <Card key={article.Slug} article={article} categorie/>
+                    </div>
                 })}
             </article>
         </section>

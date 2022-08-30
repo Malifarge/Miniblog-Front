@@ -11,7 +11,7 @@ const Input = ({
     return (
       <div className="flex clmn aic">
         <div className="flex jcsb w-280">
-          <label htmlFor={label}>{label} {required && "*"}</label>
+          <label htmlFor={label}>{label} {required && <span className="red">*</span> }</label>
           <input
             name={label}
             type={type}

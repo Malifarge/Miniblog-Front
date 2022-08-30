@@ -1,38 +1,92 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Fascinate+Inline&family=Krona+One&family=Roboto&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+body{
+  padding: 20px;
+  background:  #242121;
   color: white;
+  font-family: 'Roboto', sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+.flex{
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.clmn{
+  flex-direction: column;
+}
+
+.aic{
+  align-items: center;
+}
+
+.jcsb{
+  justify-content: space-between;
+}
+
+.asfe{
+  align-self: flex-end;
+}
+
+.g-30{
+  gap: 30px;
+}
+
+a, button{
+  color: rgba(255, 255, 255, 0.486);
+  text-decoration: none;
+}
+
+a:hover, button:hover{
+  color: white;
+  text-decoration: 2px underline #fc7986;
+  cursor: pointer;
+}
+
+
+.red {
+  color: red;
+}
+
+.w-280{
+  width: 280px;
+}
+
+.w100-100{
+  width: 100%;
+}
+
+.w100-50{
+  width: 50%;
+}
+
+.p-10{
+  padding: 10px;
+}
+
+.b{
+  border: 2px solid #fc79864f ;
+}
+
+.b-b{
+  border-bottom: 2px solid #fc79864f ;
+}
+
+h1{
+  font-family: 'Fascinate Inline', cursive;
+}
+
+h2{ 
+  font-family: 'Krona One', sans-serif;
+  margin: 0;
+}
+
+.tierce{
+  color: rgba(255, 255, 255, 0.486);
+}
+
+button{
+  background: none;
+  border: 1px solid #fc7986;
+  padding: 10px;
+  border-radius: 50px;
 }
