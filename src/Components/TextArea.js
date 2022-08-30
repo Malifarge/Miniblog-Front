@@ -8,8 +8,8 @@ const  TextArea= ({
   }) => {
     return (
       <div className="flex clmn aic">
-        <div className="flex jcsb w-280">
-          <label htmlFor={label}>{label} {required && "*"}</label>
+        <div className="flex jcsb w-280 aic">
+          <label htmlFor={label}>{label} {required && <span className="red">*</span> }</label>
           <textarea
             name={label}
             value={value}
@@ -20,6 +20,7 @@ const  TextArea= ({
           />
         </div>
         {error && <small className="m-t-10 red">{error.map(err=>err.msg)}</small>}
+
       </div>
     )
   }

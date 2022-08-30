@@ -5,6 +5,7 @@ import H1 from "../Components/H1";
 import Input from "../Components/Input";
 import TextArea from "../Components/TextArea";
 import Button from "../Components/Button";
+import Obligation from "../Components/Obligation";
 
 import { newCategorie } from "../API/Catégorie";
 
@@ -45,7 +46,7 @@ const NewCategorie = () =>{
     return (
         <>
         <H1>NewCatégorie</H1>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="flex clmn aic g-30">
             <Input
             label="Nom"
             type="text"
@@ -70,6 +71,8 @@ const NewCategorie = () =>{
             disabled={!nom || !description}
             text="Submit"
             />
+
+            <Obligation/>
 
         </form>
         </>

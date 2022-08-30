@@ -5,6 +5,7 @@ import H1 from "../Components/H1";
 import Input from "../Components/Input";
 import TextArea from "../Components/TextArea";
 import Button from "../Components/Button";
+import Obligation from "../Components/Obligation";
 
 import { newArticle } from "../API/Articles";
 
@@ -54,7 +55,7 @@ const NewArticle = () =>{
     return (
         <>
         <H1>NewArticle</H1>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="flex clmn aic g-30">
             <Input
             label="Pseudo"
             type="text"
@@ -89,7 +90,10 @@ const NewArticle = () =>{
             text="Submit"
             />
 
+            <Obligation/>
+
         </form>
+        
         </>
     )
 }

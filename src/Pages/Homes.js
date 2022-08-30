@@ -31,7 +31,7 @@ const Home = () =>{
     return (
         <>
         <H1>Home</H1>
-        <section className="flex">
+        <section className="flex tel-clmn">
             <Ul lignes={categories} link={true}/>
             <article className="flex clmn aic w100-100 g-30">
                 {articles.map(article=>{

@@ -50,7 +50,7 @@ const Categorie = () =>{
             </article>
             <small className="tierce">{categorie.Description}</small>
         </section>
-        <section className="flex wrap g-30">
+        <section className="flex wrap g-30 m-t-10">
             {articles.map(article=>{
                 return <article key={article.Slug} className="b p-10 w-280">
                     <Card article={article}/>
