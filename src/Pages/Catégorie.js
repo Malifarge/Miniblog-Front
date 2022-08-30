@@ -2,10 +2,13 @@
 
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { fetchArticles } from "../API/Articles";
+
 import H1 from "../Components/H1";
 import Button from "../Components/Button";
 import Card from "../Components/Card";
+
+import { fetchArticles } from "../API/Articles";
+
 
 const Categorie = () =>{
 

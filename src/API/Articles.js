@@ -4,4 +4,19 @@ const fetchArticles = async (slug) =>{
     return(Data);
 }
 
-export {fetchArticles}
+const newArticle = async (article,slug) =>{ 
+    const response = await fetch(`http://localhost:5000/articles/${slug}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'Application/json'
+      },
+      body: JSON.stringify(article)
+    })
+    
+    if (response.status === 400){
+      const Data = response.json()
+      return (Data)
+    }  
+}
+
+export {fetchArticles, newArticle}

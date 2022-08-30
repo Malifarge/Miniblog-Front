@@ -1,7 +1,10 @@
-import H1 from "../Components/H1";
+
 import { useEffect,useState } from "react";
+
+import H1 from "../Components/H1";
 import Ul from "../Components/Ul";
 import Card from "../Components/Card";
+
 import { fetchCategories } from "../API/Catégorie";
 import { fetchArticles } from "../API/Articles";
 
