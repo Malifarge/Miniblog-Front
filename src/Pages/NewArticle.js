@@ -45,6 +45,9 @@ const NewArticle = () =>{
 
         if (Data){
             setErrors(Data)
+            setPseudo("Anonyme")
+            setTitre("")
+            setDescription("")
         }else{
             navigate(`/${slug}`)
         }

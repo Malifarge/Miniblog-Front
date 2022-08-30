@@ -101,6 +101,14 @@ button{
   border-radius: 50px;
 }
 
+button:disabled{
+  opacity: 0;
+}
+
+.erreur{
+  border:1px solid red;
+}
+
 @media (max-width: 768px) {
 
   h1{

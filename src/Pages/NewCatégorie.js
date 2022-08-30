@@ -38,6 +38,8 @@ const NewCategorie = () =>{
 
         if (Data){
             setErrors(Data)
+            setNom("")
+            setDescription("")
         }else{
             navigate(`/`)
         }
