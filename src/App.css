@@ -103,6 +103,7 @@ button{
 
 button:disabled{
   opacity: 0;
+  cursor:auto;
 }
 
 .erreur{
